@@ -16,8 +16,9 @@ void ofApp::setup()
     _receiver.setup("4000");
     
     // first, we need to set addresses for setting callback function for Liblo
-    //_receiver.addAdress("/none", OFXLO_TYPE_NONE); // ToDo
-    _receiver.addAdress("/int", OFXLO_TYPE_INT, 2);
+    
+    _receiver.addAdress("/none", OFXLO_TYPE_NONE);  // with no args
+    _receiver.addAdress("/int", OFXLO_TYPE_INT, 2); 
     _receiver.addAdress("/float", OFXLO_TYPE_FLOAT, 2);
     _receiver.addAdress("/string", OFXLO_TYPE_STRING,2);
     _receiver.addAdress("/blob", OFXLO_TYPE_BLOB);
@@ -34,7 +35,11 @@ void ofApp::update()
     	ofxLoMessage m;
     	_receiver.getNextMessage(&m);
         
-    	if(m.getAddress() == "/int")
+        if(m.getAddress() == "/none")
+    	{
+    		std::cout << "no arguments." << std::endl;
+    	}
+    	else if(m.getAddress() == "/int")
     	{
     		int i1 = m.getArgAsInt(0);
     		int i2 = m.getArgAsInt(1);

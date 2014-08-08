@@ -56,6 +56,8 @@ public:
 
         return true;
     };
+    
+    // osc address, type of arguments, number of parametors
     void addAdress(std::string path, ofxLoArgType type, int argsize=1)
 	{
         std::string a_type = "";
@@ -76,11 +78,10 @@ public:
         {
             a_type = "b";
         }
-        // ToDo
-//        else if(type == OFXLO_TYPE_NONE)
-//		{
-//            a_type = "";
-//		}
+        else if(type == OFXLO_TYPE_NONE)
+		{
+            a_type = "";
+		}
 
         std::string types = "";
         int n = 0; while (n < argsize){ types += a_type; n++; }

@@ -15,6 +15,8 @@ int lo_recieve(const char *path, const char *types, lo_arg **argv, int argc, voi
     std::string ad = path;
     message->setAddress(ad);
 
+    //std::cout << "argc: " << argc << std::endl;
+    
     for (int i = 0; i < argc; i++)
     {
         if(types[i] == 'i')

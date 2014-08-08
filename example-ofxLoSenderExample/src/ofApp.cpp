@@ -44,8 +44,9 @@ void ofApp::draw()
     ofxLoMessage m;
     m.setAddress("/blob");
     m.addBlobArg(size, pixels);
-    _sender.sendMessage(m);
+    //_sender.sendMessage(m);
 
+    ofDrawBitmapString("PRESS 'n' to send int.", 20, 150);
     ofDrawBitmapString("PRESS 'i' to send int.", 20, 150);
     ofDrawBitmapString("PRESS 'f' to send float.", 20, 170);
     ofDrawBitmapString("PRESS 's' to send string.", 20, 190);
@@ -76,6 +77,12 @@ void ofApp::keyPressed(int key)
 		m.setAddress("/string");
 		m.addStringArg("hello");
 		m.addStringArg("konnichiwa");
+		_sender.sendMessage(m);
+	}
+    else if(key == 'n')
+	{
+		ofxLoMessage m;
+		m.setAddress("/none");
 		_sender.sendMessage(m);
 	}
 }
