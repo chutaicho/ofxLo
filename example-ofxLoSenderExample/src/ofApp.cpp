@@ -46,10 +46,10 @@ void ofApp::draw()
     m.addBlobArg(size, pixels);
     _sender.sendMessage(m);
 
-    ofDrawBitmapString("PRESS 'n' to send int.", 20, 150);
-    ofDrawBitmapString("PRESS 'i' to send int.", 20, 150);
-    ofDrawBitmapString("PRESS 'f' to send float.", 20, 170);
-    ofDrawBitmapString("PRESS 's' to send string.", 20, 190);
+    ofDrawBitmapString("PRESS 'n' to send no argument", 20, 120);
+    ofDrawBitmapString("PRESS 'i' to send int.", 20, 140);
+    ofDrawBitmapString("PRESS 'f' to send float.", 20, 160);
+    ofDrawBitmapString("PRESS 's' to send string.", 20, 180);
 }
 
 //--------------------------------------------------------------
