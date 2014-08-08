@@ -1,6 +1,10 @@
 //
 //  Created by Takashi Aoki (c) takashiaoki.com
 //
+//  Released under the MIT license
+//  http://opensource.org/licenses/mit-license.php
+//
+
 #pragma once
 
 #include <iostream>

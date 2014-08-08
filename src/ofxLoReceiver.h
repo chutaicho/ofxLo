@@ -5,8 +5,12 @@
 //  openFrameworks addon for liblo OSC Library, inspired by ofxOsc.
 //  
 //  liblo version 0.25
-//  liblo: http://liblo.sourceforge.net/ 
+//  liblo: http://liblo.sourceforge.net/
 //
+//  Released under the MIT license
+//  http://opensource.org/licenses/mit-license.php
+//
+
 #pragma once
 
 #include <iostream>
