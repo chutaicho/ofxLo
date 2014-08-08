@@ -44,7 +44,7 @@ void ofApp::draw()
     ofxLoMessage m;
     m.setAddress("/blob");
     m.addBlobArg(size, pixels);
-    //_sender.sendMessage(m);
+    _sender.sendMessage(m);
 
     ofDrawBitmapString("PRESS 'n' to send int.", 20, 150);
     ofDrawBitmapString("PRESS 'i' to send int.", 20, 150);
